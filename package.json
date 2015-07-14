@@ -1,6 +1,6 @@
 {
   "name": "Template",
-  "description": "Basic template for front-end development with Turret, jQuery, Browserify, Browserify Shim, Browser Sync, and Uglify.",
+  "description": "Basic template for front-end development with Turret, Less, Watch, jQuery, Browserify, Browserify Shim, Browser Sync, and Uglify.",
   "version": "0.1.0",
   "repository": {
     "type": "git",
