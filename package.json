@@ -7,7 +7,7 @@
     "url": "https://github.com/scottdejonge/template"
   },
   "dependencies": {
-    "bigfishtv-turret": "^3.0.0",
+    "bigfishtv-turret": "^3.1.0",
     "jquery": "^2.1.4",
     "less": "^2.5.1"
   },
