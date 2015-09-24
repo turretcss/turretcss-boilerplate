@@ -37,9 +37,7 @@ template/
 │   ├── glyphs/
 │   ├── ico/
 │   ├── img/
-├── generated/
-│   ├── scripts/
-│   └── styles/
+├── dist/
 ├── scripts/
 │   ├── scripts.js
 └── styles/

@@ -8,26 +8,28 @@
   },
   "dependencies": {
     "bigfishtv-turret": "^3.1.0",
-    "jquery": "^2.1.4",
-    "less": "^2.5.1"
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
+    "less": "^2.5.1",
     "watch": "^0.13.0",
     "browserify": "^10.2.6",
     "browserify-shim": "^3.8.9",
     "uglify-js": " ^2.4.23",
-    "browser-sync": "^2.7.13"
+    "browser-sync": "^2.7.13",
+    "less-plugin-autoprefix": "^1.5.0",
+    "less-plugin-clean-css": "^1.5.1"
   },
   "scripts": {
-    "sync": "browser-sync start --proxy \"DEV_URL\" --files \"generated/styles/*.css\"",
+    "sync": "browser-sync start --proxy \"DEV_URL\" --files \"dist/*.css\"",
     "watch:styles": "watch \"npm run build:styles\" \"styles\"",
     "watch:scripts": "watch \"npm run build:scripts\" \"scripts\"",
     "watch": "npm run watch:styles & npm run watch:scripts & npm run sync",
-    "build:styles": "lessc -s --include-path=\"node_modules/bigfishtv-turret\" styles/styles.less > generated/styles/styles.css",
-    "build:scripts": "browserify scripts/scripts.js > generated/scripts/scripts.js",
+    "build:styles": "lessc --include-path=\"node_modules/bigfishtv-turret\" styles/main.less --autoprefix > dist/main.css",
+    "build:scripts": "browserify scripts/scripts.js > dist/scripts.js",
     "build": "npm run build:styles && npm run build:scripts",
-    "deploy:styles": "lessc -x --include-path=\"node_modules/bigfishtv-turret\" styles/styles.less > generated/styles/styles.css",
-    "deploy:scripts": "browserify scripts/scripts.js | uglifyjs -c > generated/scripts/scripts.js",
+    "deploy:styles": "lessc --include-path=\"node_modules/bigfishtv-turret\" styles/main.less --clean-css --autoprefix > dist/main.css",
+    "deploy:scripts": "browserify scripts/scripts.js | uglifyjs -c > dist/scripts.js",
     "deploy": "npm run deploy:styles && npm run deploy:scripts"
   },
   "browserify": {
