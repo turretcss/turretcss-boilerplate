@@ -86,7 +86,7 @@ __Watch__ Watch Styles and Scripts
 `watch`
 
 ```
-"watch": "npm run watch:styles && npm run watch:scripts"
+"watch": "npm run watch:styles & npm run watch:scripts"
 ```
 
 ###Build

@@ -24,7 +24,7 @@
     "sync": "browser-sync start --proxy \"DEV_URL\" --files \"dist/*.css\"",
     "watch:styles": "watch \"npm run build:styles\" \"styles\"",
     "watch:scripts": "watch \"npm run build:scripts\" \"scripts\"",
-    "watch": "npm run watch:styles && npm run watch:scripts",
+    "watch": "npm run watch:styles & npm run watch:scripts",
     "build:styles": "lessc --include-path=\"node_modules/bigfishtv-turret\" styles/main.less --autoprefix > dist/main.css",
     "build:scripts": "browserify scripts/main.js > dist/main.js",
     "build": "npm run build:styles && npm run build:scripts",
