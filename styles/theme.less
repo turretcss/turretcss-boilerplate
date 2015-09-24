@@ -199,8 +199,8 @@
  */
 
 // Strong
-@strong-font-family: @bold-font-family;
-@strong-font-weight: @bold-font-weight;
+@strong-font-family: @semibold-font-family;
+@strong-font-weight: @semibold-font-weight;
 
 
 /*
@@ -323,8 +323,8 @@
 
 // Definition Term
 @definition-term-margin: 10px 0px;
-@definition-term-font-family: @semibold-font-family;
-@definition-term-font-weight: @semibold-font-weight;
+@definition-term-font-family: @medium-font-family;
+@definition-term-font-weight: @medium-font-weight;
 @definition-term-font-size: @font-size-medium;
 @definition-term-color: @paragraph-color;
 
@@ -410,10 +410,10 @@
  */
 
 // Label
-@label-margin: 15px 0px;
-@label-font-family: @semibold-font-family;
-@label-font-weight: @semibold-font-weight;
-@label-font-size: 1.2;
+@label-margin: 20px 0px;
+@label-font-family: @medium-font-family;
+@label-font-weight: @medium-font-weight;
+@label-font-size: @font-size-small;
 @label-color: @dark;
 @label-line-height: @line-height-medium;
 
@@ -645,9 +645,9 @@
 // Button
 @button-padding: 12px 16px;
 @button-height: @height-medium;
-@button-font-family: @bold-font-family;
-@button-font-weight: @bold-font-weight;
-@button-font-size: 1.4;
+@button-font-family: @semibold-font-family;
+@button-font-weight: @semibold-font-weight;
+@button-font-size: @font-size-medium;
 @button-color: @dark-grey;
 @button-line-height: 1;
 @button-text-align: center;
@@ -685,34 +685,34 @@
 // Button Inverse
 @button-inverse-color: @light;
 @button-inverse-background: @inverse;
-@button-inverse-border: 1px solid darken(@inverse, 5%);
+@button-inverse-border: none;
 @button-inverse-hover-color: @button-inverse-color;
 @button-inverse-hover-background: darken(@button-inverse-background, 10%);
-@button-inverse-hover-border: 1px solid darken(@inverse, 15%);
+@button-inverse-hover-border: none;
 
 // Button Primary
 @button-primary-color: @white;
 @button-primary-background: @primary;
-@button-primary-border: 1px solid darken(@primary, 5%);
+@button-primary-border: none;
 @button-primary-hover-color: @button-primary-color;
 @button-primary-hover-background: darken(@primary, 10%);
-@button-primary-hover-border: 1px solid darken(@primary, 15%);
+@button-primary-hover-border: none;
 
 // Button Secondary
 @button-secondary-color: @white;
 @button-secondary-background: @secondary;
-@button-secondary-border: 1px solid darken(@secondary, 5%);
+@button-secondary-border: none;
 @button-secondary-hover-color: @button-secondary-color;
 @button-secondary-hover-background: darken(@secondary, 10%);
-@button-secondary-hover-border: 1px solid darken(@secondary, 15%);
+@button-secondary-hover-border: none;
 
 // Button Tertiary
 @button-tertiary-color: @white;
 @button-tertiary-background: @tertiary;
-@button-tertiary-border: 1px solid darken(@tertiary, 5%);
+@button-tertiary-border: none;
 @button-tertiary-hover-color: @button-tertiary-color;
 @button-tertiary-hover-background: darken(@tertiary, 10%);
-@button-tertiary-hover-border: 1px solid darken(@tertiary, 5%);
+@button-tertiary-hover-border: none;
 
 // Button Border
 @button-border-color: @dark;
@@ -734,34 +734,34 @@
 // Button Error
 @button-error-color: @white;
 @button-error-background: @error;
-@button-error-border: 1px solid darken(@error, 5%);
+@button-error-border: none;
 @button-error-hover-color: @button-error-color;
 @button-error-hover-background: darken(@error, 10%);
-@button-error-hover-border: 1px solid darken(@error, 15%);
+@button-error-hover-border: none;
 
 // Button Warning
 @button-warning-color: @white;
 @button-warning-background: @warning;
-@button-warning-border: 1px solid darken(@warning, 5%);
+@button-warning-border: none;
 @button-warning-hover-color: @button-warning-color;
 @button-warning-hover-background: darken(@warning, 10%);
-@button-warning-hover-border: 1px solid darken(@warning, 15%);
+@button-warning-hover-border: none;
 
 // Button Success
 @button-success-color: @white;
 @button-success-background: @success;
-@button-success-border: 1px solid darken(@success, 5%);
+@button-success-border: none;
 @button-success-hover-color: @button-success-color;
 @button-success-hover-background: darken(@success, 10%);
-@button-success-hover-border: 1px solid darken(@success, 15%);
+@button-success-hover-border: none;
 
 // Button Info
 @button-info-color: @white;
 @button-info-background: @info;
-@button-info-border: 1px solid darken(@button-info-background, 5%);
+@button-info-border: none;
 @button-info-hover-color: @button-info-color;
 @button-info-hover-background: darken(@button-info-background, 10%);
-@button-info-hover-border: 1px solid darken(@info, 15%);
+@button-info-hover-border: none;
 
 
 /*
@@ -843,25 +843,25 @@
 
 // Table Caption
 @table-caption-margin: 5px 10px;
-@table-caption-font-family: @bold-font-family;
-@table-caption-font-weight: @bold-font-weight;
+@table-caption-font-family: @medium-font-family;
+@table-caption-font-weight: @medium-font-weight;
 @table-caption-font-size: @font-size-medium;
 @table-caption-color: @body-color;
 @table-caption-text-align: left;
 
 // Table Head
-@table-head-padding: 10px;
-@table-head-font-family: @bold-font-family;
-@table-head-font-weight: @bold-font-weight;
-@table-head-font-size: @paragraph-font-size;
+@table-head-padding: @padding-xsmall @padding-small;
+@table-head-font-family: @medium-font-family;
+@table-head-font-weight: @medium-font-weight;
+@table-head-font-size: @font-size-small;
 @table-head-text-align: left;
 @table-head-text-transform: none;
 @table-head-color: @body-color;
 
 // Table Body
-@table-cell-padding: 10px;
-@table-cell-font-family: @regular-font-family;
-@table-cell-font-weight: @regular-font-weight;
+@table-cell-padding: @padding-xsmall @padding-small;
+@table-cell-font-family: @paragraph-font-family;
+@table-cell-font-weight: @paragraph-font-weight;
 @table-cell-font-size: @paragraph-font-size;
 @table-cell-color: @body-color;
 @table-cell-line-height: @line-height-medium;
