@@ -1,7 +1,7 @@
 {
   "name": "Template",
   "description": "Basic template for front-end development with Turret, Less, Watch, jQuery, Browserify, Browserify Shim, Browser Sync, and Uglify.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/scottdejonge/template"

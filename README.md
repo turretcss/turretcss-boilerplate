@@ -41,10 +41,10 @@ template/
 ├── scripts/
 │   ├── scripts.js
 └── styles/
+	├── main.less
+	├── turret.less
+	├── theme.less
     ├── fonts.less
-    ├── styles.less
-    ├── theme.less
-    ├── turret.less
     └── template
     	├── header.less
     	└── footer.less
@@ -60,7 +60,7 @@ __Sync__ Browser-sync proxy for device testing
 `watch:styles`
 
 ```
-"sync": "browser-sync start --proxy \"DEV_URL\" --files \"generated/styles/*.css\""
+"sync": "browser-sync start --proxy \"DEV_URL\" --files \"dist/*.css\""
 ```
 
 ###Watch
@@ -86,7 +86,7 @@ __Watch__ Watch Styles and Scripts
 `watch`
 
 ```
-"watch": "npm run watch:styles & npm run watch:scripts & npm run sync"
+"watch": "npm run watch:styles && npm run watch:scripts"
 ```
 
 ###Build
@@ -96,7 +96,7 @@ __Build Styles__ Less compilation
 `build:styles`
 
 ```
-"build:styles": "lessc -s --include-path=\"node_modules/bigfishtv-turret\" styles/styles.less > generated/styles/styles.css"
+"build:styles": "lessc --include-path=\"node_modules/bigfishtv-turret\" styles/main.less --autoprefix > dist/main.css"
 ```
 
 __Build Scripts__ Browserify modules compilation
@@ -104,7 +104,7 @@ __Build Scripts__ Browserify modules compilation
 `build:scripts`
 
 ```
-"build:scripts": "browserify scripts/scripts.js > generated/scripts/scripts.js"
+"build:scripts": "browserify scripts/scripts.js > dist/scripts.js"
 ```
 
 __Build__ Build Styles and Scripts
@@ -123,7 +123,7 @@ __Deploy Styles__ Less compilation and minification
 `deploy:styles`
 
 ```
-"deploy:styles": "lessc -x --include-path=\"node_modules/bigfishtv-turret\" styles/styles.less > generated/styles/styles.css"
+"deploy:styles": "lessc --include-path=\"node_modules/bigfishtv-turret\" styles/main.less --clean-css --autoprefix > dist/main.css"
 ```
 
 __Deploy Scripts__ Browserify modules compilation and Uglify minification
@@ -131,7 +131,7 @@ __Deploy Scripts__ Browserify modules compilation and Uglify minification
 `deploy:scripts`
 
 ```
-"deploy:scripts": "browserify scripts/scripts.js | uglifyjs -c > generated/scripts/scripts.js"
+"deploy:scripts": "browserify scripts/scripts.js | uglifyjs -c > dist/scripts.js"
 ```
 
 __Deploy__ Deploy Styles and Scripts
