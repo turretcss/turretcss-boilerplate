@@ -35,8 +35,7 @@ template/
 ├── assets/
 │   ├── fonts/
 │   ├── glyphs/
-│   ├── ico/
-│   ├── img/
+│   ├── images/
 ├── dist/
 ├── scripts/
 │   ├── main.js
