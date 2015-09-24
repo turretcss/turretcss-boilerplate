@@ -39,7 +39,7 @@ template/
 │   ├── img/
 ├── dist/
 ├── scripts/
-│   ├── scripts.js
+│   ├── main.js
 └── styles/
 	├── main.less
 	├── turret.less
@@ -104,7 +104,7 @@ __Build Scripts__ Browserify modules compilation
 `build:scripts`
 
 ```
-"build:scripts": "browserify scripts/scripts.js > dist/scripts.js"
+"build:scripts": "browserify scripts/main.js > dist/main.js"
 ```
 
 __Build__ Build Styles and Scripts
@@ -131,7 +131,7 @@ __Deploy Scripts__ Browserify modules compilation and Uglify minification
 `deploy:scripts`
 
 ```
-"deploy:scripts": "browserify scripts/scripts.js | uglifyjs -c > dist/scripts.js"
+"deploy:scripts": "browserify scripts/main.js | uglifyjs -c > dist/main.js"
 ```
 
 __Deploy__ Deploy Styles and Scripts
