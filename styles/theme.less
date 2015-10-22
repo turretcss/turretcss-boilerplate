@@ -58,6 +58,7 @@
 @body-font-weight: @regular-font-weight; 
 @body-color: @dark;
 @body-line-height: @line-height-medium;
+@body-letter-spacing: 0.035rem;
 @body-background: @white;
 
 
@@ -410,11 +411,11 @@
  */
 
 // Label
-@label-margin: 20px 0px;
+@label-margin: @input-margin;
 @label-font-family: @medium-font-family;
 @label-font-weight: @medium-font-weight;
-@label-font-size: @font-size-small;
-@label-color: @dark;
+@label-font-size: 1.3;
+@label-color: darken(@light-grey, 35%);
 @label-line-height: @line-height-medium;
 
 
@@ -438,10 +439,10 @@
  */
 
 // Form Message
-@form-message-margin: @label-margin;
+@form-message-margin: @input-margin;
 @form-message-font-family: @paragraph-font-family;
 @form-message-font-weight: @paragraph-font-weight;
-@form-message-font-size: 1.2;
+@form-message-font-size: @font-size-small;
 @form-message-color: @body-color;
 @form-message-line-height: @paragraph-line-height;
 
@@ -549,7 +550,7 @@
  */
 
 // Control
-@control-margin: @label-margin;
+@control-margin: @input-margin;
 @control-padding: 0px 0px 0px 1.5em;
 @control-color: @input-color;
 
@@ -565,11 +566,12 @@
 @control-label-checked-color: @control-label-color;
 
 // Control Label
-@control-label-margin: 0px 0px 0px 10px;
-@control-label-font-family: @label-font-family;
+@control-label-margin: 0px 0px 0px @margin-xsmall;
+@control-label-font-family: @input-font-family;
+@control-label-font-weight: @input-font-weight;
 @control-label-font-size: @label-font-size;
-@control-label-color: @label-color;
-@control-label-line-height: 1.5;
+@control-label-color: @input-color;
+@control-label-line-height: @input-line-height;
 
 // Control Inline
 @control-inline-margin-right: 20px;
