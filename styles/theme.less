@@ -21,25 +21,25 @@
 @transition-slow: 0.5s;
 
 // Height
-@height-xlarge: 65px;
-@height-large: 50px;
-@height-medium: 40px;
-@height-small: 30px;
-@height-xsmall: 20px;
+@height-xlarge: 6.5rem;
+@height-large: 5.0rem;
+@height-medium: 4.0rem;
+@height-small: 3.0rem;
+@height-xsmall: 2.0rem;
 
 // Margin
-@margin-xlarge: 100px;
-@margin-large: 65px;
-@margin-medium: 50px;
-@margin-small: 35px;
-@margin-xsmall: 20px;
+@margin-xlarge: 10.0rem;
+@margin-large: 6.5rem;
+@margin-medium: 5.0rem;
+@margin-small: 3.5rem;
+@margin-xsmall: 2.0rem;
 
 // Padding
-@padding-xlarge: 100px;
-@padding-large: 65px;
-@padding-medium: 50px;
-@padding-small: 35px;
-@padding-xsmall: 20px;
+@padding-xlarge: 10.0rem;
+@padding-large: 6.5rem;
+@padding-medium: 5.0rem;
+@padding-small: 3.5rem;
+@padding-xsmall: 2.0rem;
 
 // Max Width
 @max-width-xlarge: 1280px;
@@ -58,7 +58,7 @@
 @body-font-weight: @regular-font-weight; 
 @body-color: @dark;
 @body-line-height: @line-height-medium;
-@body-letter-spacing: 0.035rem;
+@body-letter-spacing: 0.03rem;
 @body-background: @white;
 
 
@@ -69,7 +69,7 @@
 //Shades
 @white: #FFFFFF;
 @black: #000000;
-@light-grey: #CCD1D9;
+@light-grey: #DEDEE4;
 @grey: #656D78;
 @dark-grey: #434A54;
 
@@ -80,7 +80,7 @@
 @success: #05BE55;
 
 //Palette
-@light: #E3E7EC;
+@light: #FAFAFD;
 @dark: @dark-grey;
 @primary: #05BED5;
 @secondary: #8D48AB;
@@ -91,11 +91,24 @@
 
 
 /*
+ * Root
+ */
+
+// Root Size
+@root-size: 10px;
+@root-size-xlarge: @root-size;
+@root-size-large: @root-size;
+@root-size-medium: @root-size;
+@root-size-small: @root-size - 1;
+@root-size-xsmall: @root-size - 1;
+
+
+/*
  * Font
  */
 
 // Fonts
-@font-path: '/assets/fonts';
+@font-path: '../fonts';
 @sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serif-font-family: Georgia, "Times New Roman", Times, serif;
 @monospace-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -114,27 +127,19 @@
 @semibold-font-weight: 600;
 @bold-font-weight: 700;
 
-// Base Font Size
-@base-font-size: 10px;
-@base-font-size-xlarge: @base-font-size;
-@base-font-size-large: @base-font-size;
-@base-font-size-medium: @base-font-size;
-@base-font-size-small: @base-font-size;
-@base-font-size-xsmall: @base-font-size;
-
 // Font Sizes
-@font-size-xlarge: 2.4;
-@font-size-large: 1.8;
-@font-size-medium: 1.6;
-@font-size-small: 1.3;
+@font-size-xlarge: 1.8;
+@font-size-large: 1.6;
+@font-size-medium: 1.4;
+@font-size-small: 1.2;
 @font-size-xsmall: 1;
 
 // Line height
-@line-height-xlarge: 1.75;
-@line-height-large: 1.5;
-@line-height-medium: 1.35;
-@line-height-small: 1.2;
-@line-height-xsmall: 1;
+@line-height-xlarge: 1.8;
+@line-height-large: 1.65;
+@line-height-medium: 1.5;
+@line-height-small: 1.35;
+@line-height-xsmall: 1.2;
 
 
 /*
@@ -147,7 +152,7 @@
 
 // Link Hover
 @link-hover-color: @dark;
-@link-hover-decoration: none;
+@link-hover-decoration: underline;
 
 
 /*
@@ -175,24 +180,25 @@
  */
 
 // Headings
-@headings-margin: 0px 0px 20px 0px;
+@headings-margin: 0 0 1em 0;
 @headings-font-family: @medium-font-family;
 @headings-font-weight: @medium-font-weight;
 @headings-color: @body-color;
-@headings-line-height: 1.1;
+@headings-line-height: @line-height-small;
 
 // Headings Small
 @headings-small-font-family: @medium-font-family;
+@headings-small-font-weight: @medium-font-weight;
 @headings-small-size: 0.6em;
 @headings-small-color: @grey;
 
 // Heading Font Sizes
 @h1-font-size: 3.2;
 @h2-font-size: 2.4;
-@h3-font-size: 1.6;
-@h4-font-size: 1.4;
-@h5-font-size: 1.2;
-@h6-font-size: 1;
+@h3-font-size: 2;
+@h4-font-size: 1.8;
+@h5-font-size: 1.6;
+@h6-font-size: 1.4;
 
 
 /*
@@ -217,7 +223,7 @@
  */
 
 // Paragraph
-@paragraph-margin: 20px 0px;
+@paragraph-margin: 2rem 0;
 @paragraph-font-family: @regular-font-family;
 @paragraph-font-weight: @regular-font-weight;
 @paragraph-font-size: @font-size-medium;
@@ -230,10 +236,10 @@
  */
 
 // Lead
-@lead-margin: 0px 0px 20px 0px;
+@lead-margin: 0 0 2rem 0;
 @lead-font-family: @thin-font-family;
 @lead-font-weight: @thin-font-weight;
-@lead-font-size: 2;
+@lead-font-size: @font-size-large;
 @lead-color: @body-color;
 @lead-line-height: @line-height-medium;
 
@@ -243,7 +249,7 @@
  */
 
 // Horizontal Rule
-@hr-margin: 35px auto;
+@hr-margin: 3rem auto;
 @hr-height: 1px;
 @hr-background: @light-grey;
 
@@ -253,8 +259,8 @@
  */
 
 // Blockquote
-@blockquote-margin: 35px 0px;
-@blockquote-padding: 0px 30px;
+@blockquote-margin: 3rem 0;
+@blockquote-padding: 0 2rem;
 
 // Blockquote Quote
 @blockquote-quote-margin: 0;
@@ -263,16 +269,16 @@
 @blockquote-quote-font-size: @lead-font-size;
 @blockquote-quote-font-style: normal;
 @blockquote-quote-line-height: @line-height-medium;
-@blockquote-quote-color: @primary;
+@blockquote-quote-color: @body-color;
 
 // Blockquote Cite
-@blockquote-cite-margin: 10px 0px;
+@blockquote-cite-margin: 1rem 0;
 @blockquote-cite-font-family: @regular-font-family;
 @blockquote-cite-font-weight: @regular-font-family;
 @blockquote-cite-font-size: @font-size-medium;
 @blockquote-cite-font-style: normal;
 @blockquote-cite-color: @blockquote-quote-color;
-@blockquote-cite-text-align: right;
+@blockquote-cite-text-align: left;
 
 
 /*
@@ -285,8 +291,9 @@
 @pullout-font-family: @blockquote-quote-font-family;
 @pullout-font-weight: @blockquote-quote-font-weight;
 @pullout-font-size: @blockquote-quote-font-size;
+@pullout-color: @blockquote-quote-color;
 @pullout-border: solid @primary;
-@pullout-border-width:  0px 0px 0px 5px;
+@pullout-border-width: 0 0 0 0.4rem;
 
 
 /*
@@ -294,18 +301,19 @@
  */
 
 // List
-@list-margin: 20px 0px;
+@list-margin: 2rem 0;
 @list-padding: 0;
 
 // Lists Item
-@list-item-margin: 10px 0px 10px 20px;
+@list-item-margin: 1rem 0 1rem 2rem;
 @list-item-font-family: @paragraph-font-family;
 @list-item-font-weight: @paragraph-font-weight;
 @list-item-font-size: @paragraph-font-size;
 @list-item-color: @paragraph-color;
+@list-item-line-height: @paragraph-line-height;
 
 // Child List
-@child-list-margin: 10px 0px;
+@child-list-margin: 1rem 0;
 @child-list-padding: 0;
 @child-list-item-margin: @list-item-margin;
 
@@ -323,14 +331,14 @@
 @definition-list-padding: 0;
 
 // Definition Term
-@definition-term-margin: 10px 0px;
-@definition-term-font-family: @medium-font-family;
-@definition-term-font-weight: @medium-font-weight;
+@definition-term-margin: 1rem 0;
+@definition-term-font-family: @semibold-font-family;
+@definition-term-font-weight: @semibold-font-weight;
 @definition-term-font-size: @font-size-medium;
 @definition-term-color: @paragraph-color;
 
 // Definition Description
-@definition-description-margin: 0px 0px 20px 0px;
+@definition-description-margin: 0 0 2rem 0;
 @definition-description-font-family: @regular-font-family;
 @definition-description-font-weight: @regular-font-weight;
 @definition-description-font-size: @font-size-medium;
@@ -353,17 +361,17 @@
  */
 
 // Pre
-@pre-margin: 20px 0px;
-@pre-padding: 10px;
+@pre-margin: 2rem 0;
+@pre-padding: 1rem;
 @pre-color: @body-color;
 @pre-tab-size: 4;
 @pre-hyphens: none;
 @pre-line-height: @line-height-medium;
-@pre-background: #FCFCFE;
-@pre-border: 1px solid @light;
+@pre-background: lighten(@light, 1%);
+@pre-border: 1px solid @light-grey;
 
 // Pre Code
-@pre-code-color: @body-color;
+@pre-code-color: @code-color;
 
 
 /*
@@ -371,8 +379,8 @@
  */
 
 // Kbd
-@kbd-margin: 0px 5px;
-@kbd-padding: 4px;
+@kbd-margin: 0 0.5rem;
+@kbd-padding: 0.4rem;
 @kbd-font-family: @code-font-family;
 @kbd-font-weight: @code-font-weight;
 @kbd-font-size: @code-font-size;
@@ -390,7 +398,7 @@
 @container-small: 100%;
 @container-medium: 1024px;
 @container-large: 1280px;
-@container-xlarge: 1680px;
+@container-xlarge: 1440px;
 
 
 /*
@@ -398,7 +406,7 @@
  */
 
 // Gutter
-@gutter: 15px;
+@gutter: 1.6rem;
 @gutter-xlarge: @gutter;
 @gutter-large: @gutter;
 @gutter-medium: @gutter;
@@ -411,11 +419,11 @@
  */
 
 // Label
-@label-margin: @input-margin;
+@label-margin: 1.6rem 0px;
 @label-font-family: @medium-font-family;
 @label-font-weight: @medium-font-weight;
-@label-font-size: 1.3;
-@label-color: darken(@light-grey, 35%);
+@label-font-size: @font-size-small;
+@label-color: @dark;
 @label-line-height: @line-height-medium;
 
 
@@ -425,11 +433,11 @@
 
 // Fieldset
 @fieldset-margin: 0;
-@fieldset-padding: 20px;
-@fieldset-border: 1px solid @grey;
+@fieldset-padding: 2rem;
+@fieldset-border: 1px solid @light-grey;
 
 // Feildset Legend
-@fieldset-legend-padding: 10px;
+@fieldset-legend-padding: 1rem;
 @fieldset-legend-font-size: @font-size-medium;
 @fieldset-legend-color: @grey;
 
@@ -439,7 +447,7 @@
  */
 
 // Form Message
-@form-message-margin: @input-margin;
+@form-message-margin: @label-margin;
 @form-message-font-family: @paragraph-font-family;
 @form-message-font-weight: @paragraph-font-weight;
 @form-message-font-size: @font-size-small;
@@ -460,7 +468,7 @@
 // Input
 @input-height: @height-medium;
 @input-margin: @label-margin;
-@input-padding: 0 16px;
+@input-padding: 0 1.6rem;
 @input-color: @body-color;
 @input-font-family: @regular-font-family;
 @input-font-weight: @regular-font-weight;
@@ -470,10 +478,15 @@
 @input-border: 1px solid @light-grey;
 @input-border-radius: @border-radius;
 
+// Input Hover
+@input-hover-color: @input-color;
+@input-hover-background: darken(@input-background, 2%);
+@input-hover-border: 1px solid darken(@light-grey, 10%);
+
 // Input Focus
 @input-focus-color: @input-color;
 @input-focus-background: darken(@input-background, 2%);
-@input-focus-border: 1px solid darken(@light-grey, 10%);
+@input-focus-border: 1px solid @primary;
 
 // Input Placeholder
 @input-placeholder-font-family: @input-font-family;
@@ -487,6 +500,13 @@
 @input-inverse-color: @white;
 @input-inverse-background: @inverse;
 @input-inverse-border: none;
+
+// Input Inverse Hover
+@input-inverse-hover-color: @input-inverse-color;
+@input-inverse-hover-background: darken(@input-inverse-background, 2%);
+@input-inverse-hover-border: @input-inverse-border;
+
+// Input Inverse Focus
 @input-inverse-focus-color: @input-inverse-color;
 @input-inverse-focus-background: darken(@input-inverse-background, 2%);
 @input-inverse-focus-border: @input-inverse-border;
@@ -497,10 +517,10 @@
 @input-disabled-border: 1px solid darken(@light, 10%);
 
 // Input Search
-@input-search-border-radius: 20px;
+@input-search-border-radius: 2rem;
 
 // Textarea
-@textarea-padding: 12px 16px;
+@textarea-padding: 1.6rem;
 @textarea-line-height: @line-height-medium;
 
 
@@ -508,7 +528,7 @@
  * Input Indicators
  */
 
-// Indicators
+// Input Indicators
 @input-error-color: @error;
 @input-warning-color: @warning;
 @input-success-color: @success;
@@ -520,27 +540,27 @@
  */
 
 // Input Extra Large
-@input-xlarge-padding: 0 30px;
+@input-xlarge-padding: 0 3.0rem;
 @input-xlarge-height: @height-xlarge;
 @input-xlarge-font-size: @font-size-xlarge;
 
 // Input Large
-@input-large-padding: 0 25px;
+@input-large-padding: 0 2.5rem;
 @input-large-height: @height-large;
 @input-large-font-size: @font-size-large;
 
 // Input Medium
-@input-medium-padding: 0 16px;
+@input-medium-padding: 0 1.6rem;
 @input-medium-height: @input-height;
 @input-medium-font-size: @input-font-size;
 
 // Input Small
-@input-small-padding: 0 12px;
+@input-small-padding: 0 1.2rem;
 @input-small-height: @height-small;
 @input-small-font-size: @font-size-small;
 
 // Input Extra Small
-@input-xsmall-padding: 0 8px;
+@input-xsmall-padding: 0 0.8rem;
 @input-xsmall-height: @height-xsmall;
 @input-xsmall-font-size: @font-size-xsmall;
 
@@ -551,11 +571,11 @@
 
 // Control
 @control-margin: @input-margin;
-@control-padding: 0px 0px 0px 1.5em;
+@control-padding: 0 0 0 1.5em;
 @control-color: @input-color;
 
 // Control Indicator
-@control-indicator-size: 16px;
+@control-indicator-size: 1.6rem;
 @control-indicator-color: @primary;
 @control-indicator-background: @input-background;
 @control-indicator-border: @input-border;
@@ -566,7 +586,7 @@
 @control-label-checked-color: @control-label-color;
 
 // Control Label
-@control-label-margin: 0px 0px 0px @margin-xsmall;
+@control-label-margin: 0 0 0 1rem;
 @control-label-font-family: @input-font-family;
 @control-label-font-weight: @input-font-weight;
 @control-label-font-size: @label-font-size;
@@ -574,7 +594,7 @@
 @control-label-line-height: @input-line-height;
 
 // Control Inline
-@control-inline-margin-right: 20px;
+@control-inline-margin-right: 2rem;
 
 // Checkbox
 @checkbox-border-radius: none;
@@ -595,12 +615,13 @@
 @select-font-weight: @input-font-weight;
 @select-font-size: @input-font-size;
 @select-color: @input-color;
+@select-line-height: auto;
 @select-background: @input-background;
 @select-border: @input-border;
 @select-border-radius: @border-radius;
 
 // Select Arrow
-@select-arrow-size: 5px;
+@select-arrow-size: 0.4rem;
 @select-arrow-background: @dark;
 
 // Select Inverse
@@ -645,7 +666,7 @@
  */
 
 // Button
-@button-padding: 12px 16px;
+@button-padding: 1.2rem 1.6rem;
 @button-height: @height-medium;
 @button-font-family: @semibold-font-family;
 @button-font-weight: @semibold-font-weight;
@@ -718,10 +739,10 @@
 
 // Button Border
 @button-border-color: @dark;
-@button-border-border: 1px solid @button-border-color;
+@button-border-border: none;
 @button-border-background: transparent;
 @button-border-hover-color: @white;
-@button-border-hover-border: 1px solid @button-border-color;
+@button-border-hover-border: none;
 @button-border-hover-background: @button-border-color;
 
 // Button Text
@@ -729,11 +750,12 @@
 @button-text-hover-color: @primary;
 
 
+
 /*
  * Button Indicators
  */
 
-// Button Error
+//Button Error
 @button-error-color: @white;
 @button-error-background: @error;
 @button-error-border: none;
@@ -741,7 +763,7 @@
 @button-error-hover-background: darken(@error, 10%);
 @button-error-hover-border: none;
 
-// Button Warning
+//Button Warning
 @button-warning-color: @white;
 @button-warning-background: @warning;
 @button-warning-border: none;
@@ -749,7 +771,7 @@
 @button-warning-hover-background: darken(@warning, 10%);
 @button-warning-hover-border: none;
 
-// Button Success
+//Button Success
 @button-success-color: @white;
 @button-success-background: @success;
 @button-success-border: none;
@@ -757,7 +779,7 @@
 @button-success-hover-background: darken(@success, 10%);
 @button-success-hover-border: none;
 
-// Button Info
+//Button Info
 @button-info-color: @white;
 @button-info-background: @info;
 @button-info-border: none;
@@ -771,12 +793,12 @@
  */
 
 // Button Extra Large
-@button-xlarge-padding: 20px 30px;
+@button-xlarge-padding: 2.0rem 3.0rem;
 @button-xlarge-height: @height-xlarge;
 @button-xlarge-font-size: @font-size-xlarge;
 
 // Button Large
-@button-large-padding: 15px 25px;
+@button-large-padding: 1.5rem 2.5rem;
 @button-large-height: @height-large;
 @button-large-font-size: @font-size-large;
 
@@ -786,12 +808,12 @@
 @button-medium-font-size: @button-font-size;
 
 // Button Small
-@button-small-padding: 8px 12px;
+@button-small-padding: 0.8rem 1.2rem;
 @button-small-height: @height-small;
 @button-small-font-size: @font-size-small;
 
 // Button Extra Small
-@button-xsmall-padding: 4px 8px;
+@button-xsmall-padding: 0.4rem 0.8rem;
 @button-xsmall-height: @height-xsmall;
 @button-xsmall-font-size: @font-size-xsmall;
 
@@ -803,11 +825,11 @@
 // Figure
 @figure-display: block;
 @figure-margin: 0;
-@figure-padding: 10px;
+@figure-padding: 1rem;
 @figure-border: 1px solid @light-grey;
 
 // Figure Caption
-@figure-caption-margin: 10px 0px;
+@figure-caption-margin: 1rem 0;
 @figure-caption-font-family: @paragraph-font-family;
 @figure-caption-font-weight: @paragraph-font-weight;
 @figure-caption-font-size: @paragraph-font-size;
@@ -829,10 +851,10 @@
 
 // Nav
 @nav-list-margin: 0;
-@nav-item-margin: 10px 0px;
+@nav-item-margin: 1rem 0;
 
 // Nav Inline
-@nav-inline-item-margin: 0px 10px;
+@nav-inline-item-margin: 0 1rem;
 
 
 /*
@@ -841,44 +863,37 @@
 
 // Table
 @table-background: none;
+@table-border: 1px solid @light-grey;
 @table-border-radius: @border-radius;
 
 // Table Caption
-@table-caption-margin: 5px 10px;
-@table-caption-font-family: @medium-font-family;
-@table-caption-font-weight: @medium-font-weight;
+@table-caption-margin: 1rem 0;
+@table-caption-font-family: @bold-font-family;
+@table-caption-font-weight: @bold-font-weight;
 @table-caption-font-size: @font-size-medium;
 @table-caption-color: @body-color;
 @table-caption-text-align: left;
 
 // Table Head
-@table-head-padding: @padding-xsmall @padding-small;
-@table-head-font-family: @medium-font-family;
-@table-head-font-weight: @medium-font-weight;
-@table-head-font-size: @font-size-small;
+@table-head-padding: 1rem;
+@table-head-font-family: @bold-font-family;
+@table-head-font-weight: @bold-font-weight;
+@table-head-font-size: @paragraph-font-size;
 @table-head-text-align: left;
 @table-head-text-transform: none;
 @table-head-color: @body-color;
+@table-head-border: @table-border;
+@table-head-background: @light;
 
-// Table Body
-@table-cell-padding: @padding-xsmall @padding-small;
-@table-cell-font-family: @paragraph-font-family;
-@table-cell-font-weight: @paragraph-font-weight;
+// Table Cell
+@table-cell-padding: 1rem;
+@table-cell-font-family: @regular-font-family;
+@table-cell-font-weight: @regular-font-weight;
 @table-cell-font-size: @paragraph-font-size;
 @table-cell-color: @body-color;
 @table-cell-line-height: @line-height-medium;
 @table-cell-vertical-align: middle;
-
-// Table Border
-@table-border: solid @light-grey;
-@table-border-width: 1px;
-
-// Table Block
-@table-block-head-background: @light;
+@table-cell-border: @table-border;
 
 // Table Reponsive
-@table-responsive-breakpoint: @small-down;
-@table-responsive-row-margin: 20px 0px;
-@table-responsive-cell-padding: 10px;
-@table-responsive-border: solid @light;
-@table-responsive-border-width: 1px;
+@table-responsive-breakpoint: @xsmall;
