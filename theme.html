@@ -12,10 +12,99 @@
 	
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="/dist/bundle.css" />
+
+	<style>
+
+		h2[id] {
+			margin-top: 5rem;
+			padding-bottom: 1rem;
+			font-weight: 300;
+			border-bottom: 1px solid #ddd;
+		}
+
+		h3[id] {
+			margin-top: 3.5rem;
+			margin-bottom: 2rem;
+			font-size: 1.6rem;
+		}
+
+		.swatch {
+			position: relative;
+			display: inline-block;
+			margin: 5px;
+			height: 130px;
+			width: 100px;
+		}
+
+		.swatch small {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 30px;
+			font-size: 1.2rem;
+			line-height: 30px;
+			background: #fff;
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
-      <h2 id="typography">Typography</h2>
+
+		<h2 id="colors">Colors</h2>
+
+		<h3 id="shades">Shades</h3>
+
+		<div class="swatches">
+			<div class="swatch background-white"><small>White</small></div>
+			<div class="swatch background-light-grey"><small>Light Grey</small></div>
+			<div class="swatch background-grey"><small>Grey</small></div>
+			<div class="swatch background-dark-grey"><small>Dark Grey</small></div>
+			<div class="swatch background-black"><small>Black</small></div>
+		</div>
+
+		<h3 id="indicators">Indicators</h3>
+
+		<div class="swatches">
+			<div class="swatch background-info"><small>Info</small></div>
+			<div class="swatch background-error"><small>Error</small></div>
+			<div class="swatch background-warning"><small>Warning</small></div>
+			<div class="swatch background-success"><small>Success</small></div>
+		</div>
+
+		<h3 id="palette">Palette</h3>
+
+			<div class="swatches">
+			<div class="swatch background-light"><small>Light</small></div>
+			<div class="swatch background-primary"><small>Primary</small></div>
+			<div class="swatch background-secondary"><small>Secondary</small></div>
+			<div class="swatch background-tertiary"><small>Tertiary</small></div>
+			<div class="swatch background-dark"><small>Dark</small></div>
+		</div>
+
+		<h2 id="font">Font</h2>
+
+		<h3 id="font-families">Font Families</h3>
+
+		<p class="sans-serif-font">Sans Serif Font</p>
+		<p class="serif-font">Serif Font</p>
+		<p class="monospace-font">Monospace Font</p>
+		<p class="thin-font">Thin Font</p>
+		<p class="regular-font">Regular Font</p>
+		<p class="medium-font">Medium Font</p>
+		<p class="semibold-font">Semibold Font</p>
+		<p class="bold-font">Bold Font</p>
+
+		<h3 id="font-sizes">Font Sizes</h3>
+
+		<p class="font-size-xlarge">Font Size Extra Large</p>
+		<p class="font-size-large">Font Size Large</p>
+		<p class="font-size-medium">Font Size Medium</p>
+		<p class="font-size-small">Font Size Small</p>
+		<p class="font-size-xsmall">Font Size Extra Small</p>
+
+		<h2 id="typography">Typography</h2>
 
 		<h1>Heading 1 <small>Heading 1 small</small></h1>
 		<h2>Heading 2 <small>Heading 2 small</small></h2>
@@ -497,6 +586,6 @@
 			</table>
 		</div>
 
-    </div>
+	</div>
 </body>
 </html>
