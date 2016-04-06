@@ -1,30 +1,20 @@
-#Template
+# Template
 
-Basic template for front-end development with Turret, Less, Watch, jQuery, Browserify, Browserify Shim, Browser Sync, and Uglify.
+Basic template for front-end development using [Turret](http://turretcss.com/), [Babel](https://babeljs.io/), [jQuery](https://jquery.com/), [Browser Sync](https://www.browsersync.io/), with [Webpack](https://webpack.github.io/) for builds and [pa11y](http://pa11y.org/) for accessibility testing.
 
-##Quick start
+## Quick start
 
 There are two quick start ways to download Template:
 
 - [Download the latest release](https://github.com/scottdejonge/template/archive/master.zip).
 - Clone the repo: `git clone https://github.com/scottdejonge/template.git`.
 
-##Usage
+## Usage
 
 Once downloaded make sure to run `npm install` to install all npm dependancies.
 
-##Dependancies
+## What's Included
 
-* [Turret](https://twitter.com/scottdejonge)
-* [Less](https://www.npmjs.com/package/less)
-* [Watch](https://www.npmjs.com/package/watch/)
-* [jQuery](https://www.npmjs.com/package/jQuery)
-* [Browserify](https://www.npmjs.com/package/browserify)
-* [Browserify Shim](https://www.npmjs.com/package/browserify-shim)
-* [Browser Sync](https://www.npmjs.com/package/browser-sync)
-* [Uglify.js](https://www.npmjs.com/package/uglify-js)
-
-##What's Included
 Within the download you'll find the following directories and files.
 
 ```
@@ -50,108 +40,59 @@ template/
 ```
 
 
-##Scripts
+## Scripts
 
-###Sync
+### start
 
-__Sync__ Browser-sync proxy for device testing
-
-`watch:styles`
+Start script runs the `watch` script
 
 ```
-"sync": "browser-sync start --proxy \"DEV_URL\" --files \"dist/*.css\""
+"sync": "npm run watch"
 ```
 
-###Watch
+### test
 
-__Watch Styles__ Watch Less files in /styles/ directory
-
-`watch:styles`
+Test script runs a11y testing using pa11y using `a11y.json` config
 
 ```
-"watch:styles": "watch \"npm run build:styles\" \"styles\""
+"test": "pa11y -c ./a11y.json dev.template"
 ```
 
-__Watch Scripts__ Watch js files in /scripts/ directory
+### watch
 
-`watch:scripts`
-
-```
-"watch:scripts": "watch \"npm run build:scripts\" \"scripts\""
-```
-
-__Watch__ Watch Styles and Scripts
-
-`watch`
+Runs webpack watch
 
 ```
-"watch": "npm run watch:styles & npm run watch:scripts"
+"watch": "webpack -d --watch"
 ```
 
-###Build
+### build
 
-__Build Styles__ Less compilation
-
-`build:styles`
+Runs webpack build
 
 ```
-"build:styles": "lessc --include-path=\"node_modules/bigfishtv-turret\" styles/main.less --autoprefix > dist/main.css"
+"build": "webpack -d"
 ```
 
-__Build Scripts__ Browserify modules compilation
+### deploy
 
-`build:scripts`
-
-```
-"build:scripts": "browserify scripts/main.js > dist/main.js"
-```
-
-__Build__ Build Styles and Scripts
-
-`build`
+Runs webpack deploy
 
 ```
-"build": "npm run build:styles && npm run build:scripts"
+"deploy": "webpack -p"
 ```
 
+## Creators
 
-###Deploy
-
-__Deploy Styles__ Less compilation and minification
-
-`deploy:styles`
-
-```
-"deploy:styles": "lessc --include-path=\"node_modules/bigfishtv-turret\" styles/main.less --clean-css --autoprefix > dist/main.css"
-```
-
-__Deploy Scripts__ Browserify modules compilation and Uglify minification
-
-`deploy:scripts`
-
-```
-"deploy:scripts": "browserify scripts/main.js | uglifyjs -c > dist/main.js"
-```
-
-__Deploy__ Deploy Styles and Scripts
-
-`deploy`
-
-```
-"deploy": "npm run deploy:styles && npm run deploy:scripts"
-```
-
-##Creators
-
-__Scott de Jonge__
+**Scott de Jonge**
 
 * Twitter: [@scottdejonge](https://twitter.com/scottdejonge)
 * Github: [@scottdejonge](https://github.com/scottdejonge)
 
-##Versioning
+## Versioning
 
 Template is maintained under [the Semantic Versioning guidelines](http://semver.org/).
 
-##Copyright and license
+## Copyright and license
 
 Code released under the MIT license.

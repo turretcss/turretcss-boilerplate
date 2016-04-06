@@ -1,7 +1,7 @@
 {
   "name": "Template",
-  "description": "Basic template for front-end development with Turret, Less, Watch, jQuery, Browserify, Browserify Shim, Browser Sync, and Uglify.",
-  "version": "1.1.0",
+  "description": "Basic template for front-end development using Turret, Babel, jQuery, Browser Sync, with Webpack for builds and pa11y for accessibility testing.",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/scottdejonge/template"
@@ -37,7 +37,7 @@
   },
   "scripts": {
     "start": "npm run watch",
-    "test": "pa11y -c ./a11y.json dev.bigfishtv",
+    "test": "pa11y -c ./a11y.json dev.template",
     "watch": "webpack -d --watch",
     "build": "webpack -d",
     "deploy": "webpack -p"
