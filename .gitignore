@@ -1,5 +1,7 @@
 npm-debug.log
 node_modules
 .DS_Store
-dist/main.js
-dist/main.css
+dist/bundle.js
+dist/bundle.css
+dist/bundle.js.map
+dist/bundle.css.map
