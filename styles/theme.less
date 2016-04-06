@@ -1,3 +1,21 @@
+/*--------------------------------------------------------------------------*/
+/*                                 BASE                                     */
+/*--------------------------------------------------------------------------*/
+
+
+/*
+ * Root
+ */
+
+// Root Size
+@root-size: 10px;
+@root-size-xlarge: @root-size;
+@root-size-large: @root-size;
+@root-size-medium: @root-size;
+@root-size-small: @root-size - 1;
+@root-size-xsmall: @root-size - 1;
+
+
 /*
  * Global
  */
@@ -21,11 +39,11 @@
 @transition-slow: 0.5s;
 
 // Height
-@height-xlarge: 6.5rem;
+@height-xlarge: 6.0rem;
 @height-large: 5.0rem;
-@height-medium: 4.0rem;
-@height-small: 3.0rem;
-@height-xsmall: 2.0rem;
+@height-medium: 4.4rem;
+@height-small: 3.6rem;
+@height-xsmall: 2.4rem;
 
 // Margin
 @margin-xlarge: 8.0rem;
@@ -45,7 +63,7 @@
 @max-width-xlarge: 128rem;
 @max-width-large: 100rem;
 @max-width-medium: 80rem;
-@max-width-small: 64rem;
+@max-width-small: 60rem;
 @max-width-xsmall: 48rem;
 
 
@@ -56,103 +74,10 @@
 // Body
 @body-font-family: @regular-font-family;
 @body-font-weight: @regular-font-weight; 
-@body-color: @dark;
+@body-color: @grey;
 @body-line-height: @line-height-medium;
 @body-letter-spacing: 0.03rem;
 @body-background: @white;
-
-
-/*
- * Colors
- */
-
-//Shades
-@white: #FFFFFF;
-@black: #000000;
-@light-grey: #DEDEE4;
-@grey: #656D78;
-@dark-grey: #434A54;
-
-//Indicators
-@info: #149CFD;
-@error: #E01A2E;
-@warning: #FFC200;
-@success: #05BE55;
-
-//Palette
-@light: #FAFAFD;
-@dark: @dark-grey;
-@primary: #05BED5;
-@secondary: #8D48AB;
-@tertiary: #B2347E;
-
-//Utility
-@inverse: @dark;
-
-
-/*
- * Root
- */
-
-// Root Size
-@root-size: 10px;
-@root-size-xlarge: @root-size;
-@root-size-large: @root-size;
-@root-size-medium: @root-size;
-@root-size-small: @root-size - 1;
-@root-size-xsmall: @root-size - 1;
-
-
-/*
- * Font
- */
-
-// Fonts
-@font-path: '/assets/fonts';
-@sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serif-font-family: Georgia, "Times New Roman", Times, serif;
-@monospace-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
-
-// Generic Font Families
-@thin-font-family: @sans-serif-font-family;
-@regular-font-family: @sans-serif-font-family;
-@medium-font-family: @sans-serif-font-family;
-@semibold-font-family: @sans-serif-font-family;
-@bold-font-family: @sans-serif-font-family;
-
-// Generic Font Weights
-@thin-font-weight: 300;
-@regular-font-weight: 400;
-@medium-font-weight: 500;
-@semibold-font-weight: 600;
-@bold-font-weight: 700;
-
-// Font Sizes
-@font-size-xlarge: 1.8;
-@font-size-large: 1.6;
-@font-size-medium: 1.4;
-@font-size-small: 1.2;
-@font-size-xsmall: 1;
-
-// Line height
-@line-height-xlarge: 1.8;
-@line-height-large: 1.65;
-@line-height-medium: 1.5;
-@line-height-small: 1.35;
-@line-height-xsmall: 1.2;
-
-
-/*
- * Link
- */
-
-// Link
-@link-color: @primary;
-@link-text-decoration: none;
-
-// Link Hover
-@link-hover-color: @dark;
-@link-hover-decoration: underline;
 
 
 /*
@@ -176,6 +101,142 @@
 
 
 /*
+ * Media Queries
+ */
+
+// Orientation
+@portrait: ~"(orientation: portrait)";
+@landscape: ~"(orientation: landscape)";
+
+// Breakpoints
+@xsmall: ~"(max-width: @{screen-xsmall-max})";
+@small: ~"(min-width: @{screen-small-min}) and (max-width: @{screen-small-max})";
+@small-up: ~"(min-width: @{screen-small-min})";
+@small-down: ~"(max-width: @{screen-small-max})";
+@medium: ~"(min-width: @{screen-medium-min}) and (max-width: @{screen-medium-max})";
+@medium-up: ~"(min-width: @{screen-medium-min})";
+@medium-down: ~"(max-width: @{screen-medium-max})";
+@large: ~"(min-width: @{screen-large-min}) and (max-width: @{screen-large-max})";
+@large-up: ~"(min-width: @{screen-large-min})";
+@large-down: ~"(max-width: @{screen-large-max})";
+@xlarge: ~"(min-width: @{screen-xlarge})";
+
+// Retina
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+
+// IE Media Queries
+@ie6-7: screen\9;
+@ie8: \0screen;
+@oldIE: ~"@{ie8}\,@{ie6-7}";
+@ie9-10: ~"screen and (min-width:0\0)";
+
+
+/*
+ * Colors
+ */
+
+//Shades
+@white: #FFFFFF;
+@black: #000000;
+@light-grey: #DDD;
+@grey: #555;
+@dark-grey: #333;
+
+//Indicators
+@info: #1E90FF;
+@error: #D91E18;
+@warning: #FF4500;
+@success: #00AA00;
+
+//Palette
+@light: #FAFAFC;
+@dark: #222;
+@primary: #3455DB;
+@secondary: #663399;
+@tertiary: #8B008B;
+
+//Utility
+@inverse: @dark;
+
+
+/*
+ * Images
+ */
+
+//Image
+@image-rounded-border-radius: 8px;
+
+
+/*
+ * Print
+ */
+
+// Print Page
+@print-page-size: A4;
+@print-page-margin: 1.5cm 2cm;
+
+
+/*--------------------------------------------------------------------------*/
+/*                              TYPOGRAPHY                                  */
+/*--------------------------------------------------------------------------*/
+
+
+/*
+ * Fonts
+ */
+
+// Fonts
+@font-path: '../fonts';
+@sans-serif-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serif-font-family: Georgia, "Times New Roman", Times, serif;
+@monospace-font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+// Generic Font Families
+@thin-font-family: @sans-serif-font-family;
+@regular-font-family: @sans-serif-font-family;
+@medium-font-family: @sans-serif-font-family;
+@semibold-font-family: @sans-serif-font-family;
+@bold-font-family: @sans-serif-font-family;
+
+// Generic Font Weights
+@thin-font-weight: 300;
+@regular-font-weight: 400;
+@medium-font-weight: 500;
+@semibold-font-weight: 600;
+@bold-font-weight: 700;
+
+// Font Sizes
+@font-size-xlarge: 2.0;
+@font-size-large: 1.8;
+@font-size-medium: 1.6;
+@font-size-small: 1.4;
+@font-size-xsmall: 1.2;
+
+// Line height
+@line-height-xlarge: 1.8;
+@line-height-large: 1.65;
+@line-height-medium: 1.5;
+@line-height-small: 1.35;
+@line-height-xsmall: 1.2;
+
+
+/*
+ * Links
+ */
+
+// Link
+@link-color: @primary;
+@link-text-decoration: none;
+
+// Link Hover
+@link-hover-color: @dark;
+@link-hover-decoration: underline;
+
+
+/*
  * Headings
  */
 
@@ -183,7 +244,7 @@
 @headings-margin: 0 0 1em 0;
 @headings-font-family: @medium-font-family;
 @headings-font-weight: @medium-font-weight;
-@headings-color: @body-color;
+@headings-color: @dark-grey;
 @headings-line-height: @line-height-small;
 
 // Headings Small
@@ -195,7 +256,7 @@
 // Heading Font Sizes
 @h1-font-size: 3.2;
 @h2-font-size: 2.4;
-@h3-font-size: 2;
+@h3-font-size: 2.0;
 @h4-font-size: 1.8;
 @h5-font-size: 1.6;
 @h6-font-size: 1.4;
@@ -206,9 +267,8 @@
  */
 
 // Strong
-@strong-font-family: @semibold-font-family;
-@strong-font-weight: @semibold-font-weight;
-
+@strong-font-family: @bold-font-family;
+@strong-font-weight: @bold-font-weight;
 
 /*
  * Emphasis
@@ -306,6 +366,7 @@
 
 // Lists Item
 @list-item-margin: 1rem 0 1rem 2rem;
+@list-item-padding: 0 0 0 0.5rem;
 @list-item-font-family: @paragraph-font-family;
 @list-item-font-weight: @paragraph-font-weight;
 @list-item-font-size: @paragraph-font-size;
@@ -367,7 +428,7 @@
 @pre-tab-size: 4;
 @pre-hyphens: none;
 @pre-line-height: @line-height-medium;
-@pre-background: lighten(@light, 1%);
+@pre-background: @light;
 @pre-border: 1px solid @light-grey;
 
 // Pre Code
@@ -395,7 +456,7 @@
 
 // Mark
 @mark-margin: 0;
-@mark-padding: 0.3rem;
+@mark-padding: 0.3rem 0.6rem;
 @mark-font-family: @paragraph-font-family;
 @mark-font-weight: @paragraph-font-weight;
 @mark-font-size: @paragraph-font-size;
@@ -425,16 +486,9 @@
 @mark-info-border: none;
 
 
-/*
- * Container
- */
-
-// Container
-@container-xsmall: 100%;
-@container-small: 100%;
-@container-medium: 1024px;
-@container-large: 1280px;
-@container-xlarge: 1440px;
+/*--------------------------------------------------------------------------*/
+/*                                 GRID                                     */
+/*--------------------------------------------------------------------------*/
 
 
 /*
@@ -451,13 +505,50 @@
 
 
 /*
+ * Container
+ */
+
+// Container
+@container-xsmall: 100%;
+@container-small: 100%;
+@container-medium: 1024px;
+@container-large: 1280px;
+@container-xlarge: 1440px;
+
+
+/*
+ * Column
+ */
+
+// Column
+@grid-columns: 12;
+@column-1: 100%;
+@column-1-2: round(percentage(1/2), 4);
+@column-1-3: round(percentage(1/3), 4);
+@column-1-4: round(percentage(1/4), 4);
+@column-1-5: round(percentage(1/5), 4);
+@column-1-6: round(percentage(1/6), 4);
+@column-1-7: round(percentage(1/7), 4);
+@column-1-8: round(percentage(1/8), 4);
+@column-1-9: round(percentage(1/9), 4);
+@column-1-10: round(percentage(1/10), 4);
+@column-1-11: round(percentage(1/11), 4);
+@column-1-12: round(percentage(1/12), 4);
+
+
+/*--------------------------------------------------------------------------*/
+/*                                 FORM                                     */
+/*--------------------------------------------------------------------------*/
+
+
+/*
  * Label
  */
 
 // Label
-@label-margin: 1.6rem 0px;
-@label-font-family: @medium-font-family;
-@label-font-weight: @medium-font-weight;
+@label-margin: 1rem 0;
+@label-font-family: @regular-font-family;
+@label-font-weight: @regular-font-weight;
 @label-font-size: @font-size-small;
 @label-color: @dark;
 @label-line-height: @line-height-medium;
@@ -522,7 +613,7 @@
 // Input Focus
 @input-focus-color: @input-color;
 @input-focus-background: darken(@input-background, 2%);
-@input-focus-border: 1px solid @primary;
+@input-focus-border: 1px solid @info;
 
 // Input Placeholder
 @input-placeholder-font-family: @input-font-family;
@@ -539,13 +630,13 @@
 
 // Input Inverse Hover
 @input-inverse-hover-color: @input-inverse-color;
-@input-inverse-hover-background: darken(@input-inverse-background, 2%);
+@input-inverse-hover-background: darken(@input-inverse-background, 2.5%);
 @input-inverse-hover-border: @input-inverse-border;
 
 // Input Inverse Focus
 @input-inverse-focus-color: @input-inverse-color;
-@input-inverse-focus-background: darken(@input-inverse-background, 2%);
-@input-inverse-focus-border: @input-inverse-border;
+@input-inverse-focus-background: darken(@input-inverse-background, 5%);
+@input-inverse-focus-border: @input-focus-border;
 
 // Input Disabled
 @input-disabled-color: @light;
@@ -558,17 +649,6 @@
 // Textarea
 @textarea-padding: 1.6rem;
 @textarea-line-height: @line-height-medium;
-
-
-/*
- * Input Indicators
- */
-
-// Input Indicators
-@input-error-color: @error;
-@input-warning-color: @warning;
-@input-success-color: @success;
-@input-info-color: @info;
 
 
 /*
@@ -609,6 +689,13 @@
 @control-margin: @input-margin;
 @control-padding: 0 0 0 1.5em;
 @control-color: @input-color;
+
+// Control Hover
+@control-hover-indicator-background: @input-hover-background;
+@control-hover-indicator-border: @input-hover-border;
+
+// Control Focus
+@control-focus-indicator-box-shadow: 0 0 0 1px @white, 0 0 0 2px @info;
 
 // Control Indicator
 @control-indicator-size: 1.6rem;
@@ -660,11 +747,31 @@
 @select-arrow-size: 0.4rem;
 @select-arrow-background: @dark;
 
+// Select Hover
+@select-hover-color: @input-hover-color;
+@select-hover-background: @input-hover-background;
+@select-hover-border: @input-hover-border;
+
+// Select Focus
+@select-focus-color: @input-focus-color;
+@select-focus-background: @input-focus-background;
+@select-focus-border: @input-focus-border;
+
 // Select Inverse
 @select-inverse-color: @input-inverse-color;
 @select-inverse-border: @input-inverse-border;
 @select-inverse-background: @input-inverse-background;
 @select-inverse-arrow-background: @white;
+
+// Select Inverse Hover
+@select-inverse-hover-color: @input-inverse-hover-color;
+@select-inverse-hover-background: @input-inverse-hover-background;
+@select-inverse-hover-border: @input-inverse-hover-border;
+
+// Select Inverse Focus
+@select-inverse-focus-color: @input-inverse-focus-color;
+@select-inverse-focus-background: @input-inverse-focus-background;
+@select-inverse-focus-border: @input-inverse-focus-border;
 
 
 /*
@@ -697,18 +804,24 @@
 @select-xsmall-font-size: @input-xsmall-font-size;
 
 
+/*--------------------------------------------------------------------------*/
+/*                                ELEMENT                                   */
+/*--------------------------------------------------------------------------*/
+
+
 /*
  * Button
  */
 
 // Button
-@button-padding: 1.2rem 1.6rem;
+@button-padding: 1.3rem 2.2rem;
 @button-height: @height-medium;
-@button-font-family: @semibold-font-family;
-@button-font-weight: @semibold-font-weight;
+@button-font-family: @medium-font-family;
+@button-font-weight: @medium-font-weight;
 @button-font-size: @font-size-medium;
 @button-color: @dark-grey;
 @button-line-height: 1;
+@button-letter-spacing: 0.05rem;
 @button-text-align: center;
 @button-text-transform: none;
 @button-background: @white;
@@ -720,18 +833,8 @@
 @button-hover-background: darken(@button-background, 10%);
 @button-hover-border: 1px solid darken(@light-grey, 10%);
 
-
-/*
- * Button Disabled
- */
-
 // Button Disabled
 @button-disabled-opacity: 0.5;
-
-
-/*
- * Button Block
- */
 
 // Button Block
 @button-block-text-align: center;
@@ -828,12 +931,12 @@
  */
 
 // Button Extra Large
-@button-xlarge-padding: 2.0rem 3.0rem;
+@button-xlarge-padding: 1.8rem 3.2rem;
 @button-xlarge-height: @height-xlarge;
 @button-xlarge-font-size: @font-size-xlarge;
 
 // Button Large
-@button-large-padding: 1.5rem 2.5rem;
+@button-large-padding: 1.4rem 2.8rem;
 @button-large-height: @height-large;
 @button-large-font-size: @font-size-large;
 
@@ -843,12 +946,12 @@
 @button-medium-font-size: @button-font-size;
 
 // Button Small
-@button-small-padding: 0.8rem 1.2rem;
+@button-small-padding: 1.1rem 1.6rem;
 @button-small-height: @height-small;
 @button-small-font-size: @font-size-small;
 
 // Button Extra Small
-@button-xsmall-padding: 0.4rem 0.8rem;
+@button-xsmall-padding: 0.6rem 1.2rem;
 @button-xsmall-height: @height-xsmall;
 @button-xsmall-font-size: @font-size-xsmall;
 
@@ -918,7 +1021,7 @@
  * Media
  */
 
-// Media
+// Media Background
 @media-background: @light;
 
 
@@ -946,17 +1049,17 @@
 
 // Table Caption
 @table-caption-margin: 1rem 0;
-@table-caption-font-family: @bold-font-family;
-@table-caption-font-weight: @bold-font-weight;
+@table-caption-font-family: @regular-font-family;
+@table-caption-font-weight: @regular-font-weight;
 @table-caption-font-size: @font-size-medium;
 @table-caption-color: @body-color;
 @table-caption-text-align: left;
 
 // Table Head
 @table-head-padding: 1rem;
-@table-head-font-family: @bold-font-family;
-@table-head-font-weight: @bold-font-weight;
-@table-head-font-size: @paragraph-font-size;
+@table-head-font-family: @medium-font-family;
+@table-head-font-weight: @medium-font-weight;
+@table-head-font-size: @font-size-small;
 @table-head-text-align: left;
 @table-head-text-transform: none;
 @table-head-color: @body-color;
@@ -967,7 +1070,7 @@
 @table-cell-padding: 1rem;
 @table-cell-font-family: @regular-font-family;
 @table-cell-font-weight: @regular-font-weight;
-@table-cell-font-size: @paragraph-font-size;
+@table-cell-font-size: @font-size-small;
 @table-cell-color: @body-color;
 @table-cell-line-height: @line-height-medium;
 @table-cell-vertical-align: middle;
