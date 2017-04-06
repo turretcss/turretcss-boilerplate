@@ -1,17 +1,17 @@
-# Template
+# turretcss boilerplate
 
-Basic template for front-end development using [Turret](http://turretcss.com/), [Babel](https://babeljs.io/), [jQuery](https://jquery.com/), [Browser Sync](https://www.browsersync.io/), with [Webpack](https://webpack.github.io/) for builds and [pa11y](http://pa11y.org/) for accessibility testing.
+Basic turretcss boilerplate for front-end development using [turretcss][turretcss], [PostCSS][PostCSS], [PostCSS CLI][PostCSS CLI], [cssnext][cssnext], and [CSSNano][CSSNano].
 
 ## Quick start
 
-There are two quick start ways to download Template:
+There are two quick start ways to download turretcss boilerplate:
 
 - [Download the latest release](https://github.com/scottdejonge/template/archive/master.zip).
 - Clone the repo: `git clone https://github.com/scottdejonge/template.git`.
 
 ## Usage
 
-Once downloaded make sure to run `npm install` to install all npm dependancies.
+Once downloaded make sure to run `npm install` or `yarn` to install all npm dependancies.
 
 ## What's Included
 
@@ -19,26 +19,20 @@ Within the download you'll find the following directories and files.
 
 ```
 template/
-|   package.json
-|   README.md
-|   index.html
 ├── assets/
+│   ├── css/
 │   ├── fonts/
 │   ├── glyphs/
 │   ├── images/
 ├── dist/
-├── scripts/
-│   ├── main.js
-└── styles/
-	├── main.less
-	├── turret.less
-	├── theme.less
-    ├── fonts.less
-    └── template
-    	├── header.less
-    	└── footer.less
-```
+|   index.html
+|   package.json
+|   postcss.config.js
+|   README.md
+|   theme.html
+└─  yarn.lock
 
+```
 
 ## Scripts
 
@@ -47,39 +41,23 @@ template/
 Start script runs the `watch` script
 
 ```
-"sync": "npm run watch"
-```
-
-### test
-
-Test script runs a11y testing using pa11y using `a11y.json` config
-
-```
-"test": "pa11y -c ./a11y.json dev.template"
+"start": "npm run watch"
 ```
 
 ### watch
 
-Runs webpack watch
+Runs the build script and watches directory
 
 ```
-"watch": "webpack -d --watch"
+"watch": "npm run build -- -w"
 ```
 
 ### build
 
-Runs webpack build
+Builds CSS using PostCSS through `postcss-cli`, config is contained in `postcss.config.js`
 
 ```
-"build": "webpack -d"
-```
-
-### deploy
-
-Runs webpack deploy
-
-```
-"deploy": "webpack -p"
+"build": "postcss assets/css/main.css -o dist/bundle.css",
 ```
 
 ## Creators
@@ -96,3 +74,8 @@ Template is maintained under [the Semantic Versioning guidelines](http://semver.
 ## Copyright and license
 
 Code released under the MIT license.
+
+[PostCSS]: http://postcss.org/
+[PostCSS CLI]: https://github.com/postcss/postcss-cli
+[cssnext]: http://cssnext.io/
+[CSSNano]: http://cssnano.co/
