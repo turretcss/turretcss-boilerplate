@@ -6,8 +6,8 @@ Basic turretcss boilerplate for front-end development using [turretcss][turretcs
 
 There are two quick start ways to download turretcss boilerplate:
 
-- [Download the latest release](https://github.com/scottdejonge/template/archive/master.zip).
-- Clone the repo: `git clone https://github.com/scottdejonge/template.git`.
+- [Download the latest release](https://github.com/turretcss/turretcss-boilerplate/archive/master.zip).
+- Clone the repo: `git clone https://github.com/turretcss/turretcss-boilerplate.git`.
 
 ## Usage
 
