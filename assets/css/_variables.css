@@ -81,6 +81,7 @@
   --display-title-font-family: var(--headings-font-family);
   --display-title-font-weight: var(--headings-font-weight);
   --display-title-font-size: 2.25rem;
+  --display-title-color: inherit;
   --display-title-line-height: var(--line-height-xs);
   --display-title-text-transform: uppercase;
   --display-title-letter-spacing: var(--letter-spacing-m);
@@ -146,7 +147,7 @@
   --link-color: currentColor;
   --link-text-decoration: underline;
   --link-hover-color: currentColor;
-  --link-hover-decoration: underline;
+  --link-hover-text-decoration: underline;
 
 
   /**
@@ -765,6 +766,7 @@
    */
 
   --media-background: color(var(--black) alpha(10%));
+  --media-border-radius: var(--border-radius);
 
 
   /**
