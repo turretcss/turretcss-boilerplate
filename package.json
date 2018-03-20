@@ -18,17 +18,27 @@
     "url": "https://github.com/turretcss/turretcss-boilerplate/issues"
   },
   "dependencies": {
-    "turretcss": "^4.0.0"
+    "turretcss": "^4.1.0"
   },
   "devDependencies": {
     "cssnano": "^3.10.0",
-    "postcss-cli": "^3.0.0-beta",
-    "postcss-cssnext": "^2.8.0",
-    "postcss-import": "^8.1.2"
+    "postcss": "^6.0.20",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-cli": "^3.2.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-reporter": "^5.0.0",
+    "postcss-url": "^7.3.1"
+  },
+  "peerDependencies": {
+    "caniuse-db": "^1.0.30000815",
+    "caniuse-lite": "^1.0.30000697",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^9.1.0"
   },
   "scripts": {
     "start": "npm run watch",
     "watch": "npm run build -- -w",
-    "build": "postcss assets/css/main.css -o dist/bundle.css"
+    "build": "postcss assets/css/app.css -o dist/bundle.css"
   }
 }

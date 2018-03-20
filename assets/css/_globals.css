@@ -1,6 +1,4 @@
 :root {
-
-
   /**
    * Media Queries
    */
@@ -17,7 +15,6 @@
   @custom-media --l-down (max-width: 1679px);
   @custom-media --xl (min-width: 1680px);
 
-
   /**
    * Root
    */
@@ -29,7 +26,6 @@
   --root-size-s: var(--root-size);
   --root-size-xs: var(--root-size);
 
-
   /**
    * Focus Outline
    */
@@ -37,24 +33,21 @@
   --focus-outline: var(--border-width) solid var(--info);
   --focus-outline-offset: var(--border-width);
 
-
   /**
    * Gutter
    */
 
   --gutter: var(--space-xs);
 
-
   /**
    * Container
    */
 
-  --container-xl: 90rem;
+  --container-xl: 80rem;
   --container-l: 80rem;
   --container-m: 70rem;
   --container-s: 100%;
   --container-xs: 100%;
-
 
   /**
    * Color
@@ -62,13 +55,11 @@
 
   --color: var(--dark);
 
-
   /**
    * Background
    */
 
   --background: var(--white);
-
 
   /**
    * Border
@@ -77,8 +68,7 @@
   --border-width: 1px;
   --border-style: solid;
   --border-color: var(--light);
-  --border-radius: 2px;
-
+  --border-radius: 0.125em;
 
   /**
    * Box Shadow
@@ -89,7 +79,6 @@
   --focus-box-shadow: none;
   --active-box-shadow: none;
 
-
   /**
    * Z-Index
    */
@@ -97,7 +86,6 @@
   --z-index-high: 999;
   --z-index-medium: 99;
   --z-index-low: 9;
-
 
   /**
    * Speed
@@ -107,7 +95,6 @@
   --speed-fast: 200ms;
   --speed-medium: 300ms;
   --speed-slow: 500ms;
-
 
   /**
    * Height
@@ -119,28 +106,15 @@
   --height-s: 2.5rem;
   --height-xs: 2rem;
 
-  
-  /**
-   * Slope
-   */
-  
-  --slope-xl: calc(100vw * ((64 - 96) / (320 - 1440)));
-  --slope-l: calc(100vw * ((32 - 64) / (320 - 1440)));
-  --slope-m: calc(100vw * ((32 - 48) / (320 - 1440)));
-  --slope-s: calc(100vw * ((24 - 32) / (320 - 1440)));
-  --slope-xs: calc(100vw * ((16 - 20) / (320 - 1440)));
-
-
   /**
    * Space
    */
 
-  --space-xl: calc(3rem + var(--slope-xl));
-  --space-l: calc(2.5rem + var(--slope-l));
-  --space-m: calc(2rem + var(--slope-m));
-  --space-s: calc(1.5rem + var(--slope-s));
-  --space-xs: calc(1rem + var(--slope-xs));
-
+  --space-xl: 4rem;
+  --space-l: 3rem;
+  --space-m: 2rem;
+  --space-s: 1.5rem;
+  --space-xs: 1rem;
 
   /**
    * Margin
@@ -152,7 +126,6 @@
   --margin-s: var(--space-s);
   --margin-xs: var(--space-xs);
 
-
   /**
    * Padding
    */
@@ -163,28 +136,25 @@
   --padding-s: var(--space-s);
   --padding-xs: var(--space-xs);
 
-
   /**
    * Max Width
    */
 
-  --max-width-xl: 80rem;
-  --max-width-l: 70rem;
-  --max-width-m: 60rem;
-  --max-width-s: 50rem;
-  --max-width-xs: 40rem;
-
+  --max-width-xl: 70rem;
+  --max-width-l: 60rem;
+  --max-width-m: 50rem;
+  --max-width-s: 40rem;
+  --max-width-xs: 30rem;
 
   /**
    * Font
    */
 
   --font-family: var(--font-family-system);
-  --font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-family-serif: Georgia, "Times New Roman", Times, serif;
-  --font-family-monospace: Monaco, Menlo, Consolas, "Courier New", monospace;
-
+  --font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-family-monospace: Monaco, Menlo, Consolas, 'Courier New', monospace;
 
   /**
    * Font Weights
@@ -199,7 +169,6 @@
   --font-weight-bold: 700;
   --font-weight-black: 800;
 
-
   /**
    * Font Sizes
    */
@@ -209,7 +178,6 @@
   --font-size-m: 1rem;
   --font-size-s: 0.875rem;
   --font-size-xs: 0.75rem;
-
 
   /**
    * Line height
@@ -222,7 +190,6 @@
   --line-height-s: 1.35;
   --line-height-xs: 1.2;
 
-
   /**
    * Letter Spacing
    */
@@ -233,5 +200,4 @@
   --letter-spacing-m: 0.05em;
   --letter-spacing-s: 0.025em;
   --letter-spacing-xs: 0.01em;
-
 }
