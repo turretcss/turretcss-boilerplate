@@ -1,6 +1,6 @@
 # turretcss boilerplate
 
-Basic turretcss boilerplate for front-end development using [turretcss][turretcss], [PostCSS][PostCSS], [PostCSS CLI][PostCSS CLI], [cssnext][cssnext], and [CSSNano][CSSNano].
+The turretcss-boilerplate is a basic boilerplate using [turretcss][turretcss], [PostCSS][postcss], [PostCSS CLI][postcss cli], [postcss-preset-env][postcss-preset-env], and [CSSNano][cssnano].
 
 ## Quick start
 
@@ -25,11 +25,11 @@ template/
 │   ├── glyphs/
 │   ├── images/
 ├── dist/
-|   index.html
-|   package.json
-|   postcss.config.js
-|   README.md
-|   theme.html
+│   index.html
+│   package.json
+│   postcss.config.js
+│   README.md
+│   theme.html
 └─  yarn.lock
 
 ```
@@ -75,8 +75,8 @@ Template is maintained under [the Semantic Versioning guidelines](http://semver.
 
 Code released under the MIT license.
 
-[turretcss]: http://turretcss.com/
-[PostCSS]: http://postcss.org/
-[PostCSS CLI]: https://github.com/postcss/postcss-cli
-[cssnext]: http://cssnext.io/
-[CSSNano]: http://cssnano.co/
+[turretcss]: https://turretcss.com/
+[postcss]: https://postcss.org/
+[postcss cli]: https://github.com/postcss/postcss-cli
+[postcss-preset-env]: https://preset-env.cssdb.org/
+[cssnano]: https://cssnano.co/

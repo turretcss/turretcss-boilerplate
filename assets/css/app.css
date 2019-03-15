@@ -4,31 +4,12 @@
 
 @import 'turretcss/turret/turret';
 
-
 /**
- * Colors
+ * Definitions
  */
 
-@import './_colors';
-
-
-/**
- * Globals
- */
-
-@import './_globals';
-
-
-/**
- * Variables
- */
-
-@import './_variables';
-
-
-/**
- * Template
- */
-
-@import './template/header';
-@import './template/footer';
+@import './_color';
+@import './_base';
+@import './_typography';
+@import './_form';
+@import './_element';

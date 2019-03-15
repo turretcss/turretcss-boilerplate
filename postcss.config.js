@@ -1,13 +1,20 @@
 module.exports = {
   plugins: [
     require('postcss-import'),
-    require('postcss-cssnext')({
+    require('postcss-preset-env')({
+      stage: 1,
       features: {
-        rem: false
+        'color-mod-function': {
+          unresolved: 'warn'
+        },
+        'custom-properties': {
+          preserve: false
+        },
+        'nesting-rules': true
       }
     }),
     require('cssnano')({
       autoprefixer: false
-    }),
+    })
   ]
 }
