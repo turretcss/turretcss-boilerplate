@@ -7,8 +7,11 @@
   --form-message-font-family: var(--paragraph-font-family);
   --form-message-font-weight: var(--paragraph-font-weight);
   --form-message-font-size: var(--font-size-s);
+  --form-message-font-style: var(--paragraph-font-style);
   --form-message-color: var(--paragraph-color);
   --form-message-line-height: var(--paragraph-line-height);
+  --form-message-text-transform: var(--paragraph-text-transform);
+  --form-message-letter-spacing: var(--paragraph-letter-spacing);
 
   /** 
    * Field
@@ -22,17 +25,17 @@
    */
 
   --fieldset-margin: var(--field-margin);
-  --fieldset-padding: var(--space-xs);
-  --fieldset-border-width: var(--border-width);
-  --fieldset-border-style: var(--border-style);
-  --fieldset-border-color: var(--border-color);
-  --fieldset-border-radius: var(--border-radius);
+  --fieldset-padding: 0;
+  --fieldset-border-width: 0;
+  --fieldset-border-style: none;
+  --fieldset-border-color: transparent;
+  --fieldset-border-radius: 0;
 
   /** 
    * Legend
    */
 
-  --legend-padding: 0.5em;
+  --legend-padding: 0;
   --legend-font-family: inherit;
   --legend-font-weight: inherit;
   --legend-font-size: var(--font-size-m);
@@ -46,6 +49,7 @@
   --label-font-family: inherit;
   --label-font-weight: inherit;
   --label-font-size: var(--font-size-s);
+  --label-font-style: normal;
   --label-color: inherit;
   --label-line-height: var(--line-height-m);
   --label-text-transform: none;
@@ -62,7 +66,10 @@
   --input-font-family: inherit;
   --input-font-weight: inherit;
   --input-font-size: var(--font-size-m);
+  --input-font-style: normal;
   --input-line-height: var(--line-height-m);
+  --input-text-transform: none;
+  --input-letter-spacing: var(--letter-spacing);
   --input-background: var(--background);
   --input-border-width: var(--border-width);
   --input-border-style: var(--border-style);
@@ -126,13 +133,16 @@
   --select-font-family: var(--input-font-family);
   --select-font-weight: var(--input-font-weight);
   --select-font-size: var(--input-font-size);
+  --select-font-style: var(--input-font-style);
   --select-color: var(--input-color);
   --select-line-height: auto;
+  --select-text-transform: var(--input-text-transform);
+  --select-letter-spacing: var(--input-letter-spacing);
   --select-background: var(--input-background);
   --select-border-width: var(--input-border-width);
   --select-border-style: var(--input-border-style);
   --select-border-color: var(--input-border-color);
-  --select-border-radius: var(--border-radius);
+  --select-border-radius: var(--input-border-radius);
   --select-box-shadow: var(--input-box-shadow);
 
   --select-arrow-size: 4px;
@@ -183,10 +193,13 @@
   --control-font-family: var(--input-font-family);
   --control-font-weight: var(--input-font-weight);
   --control-font-size: var(--input-font-size);
+  --control-font-style: var(--input-font-style);
   --control-color: var(--input-color);
   --control-line-height: var(--line-height-xs);
   --control-text-transform: none;
   --control-letter-spacing: var(--letter-spacing);
+  --control-text-transform: var(--input-text-transform);
+  --control-letter-spacing: var(--input-letter-spacing);
 
   --control-hover-indicator-background: var(--input-hover-background);
   --control-hover-indicator-border-color: var(--input-hover-border-color);
